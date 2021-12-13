@@ -15,8 +15,16 @@ namespace ClassWork11
                 numbers[i] = int.Parse(input[i]);
 
             PrintIntArray(numbers);
-            Console.WriteLine($"Наибольший Элемент: {GetMaxElement(numbers)}");
-            Console.WriteLine($"Сумма элементов: {GetSum(numbers)}");
+
+            try
+            {
+                Console.WriteLine($"Наибольший Элемент: {GetMaxElement(numbers)}");
+                Console.WriteLine($"Сумма элементов: {GetSum(numbers)}");
+            }
+            catch(ArgumentException e)
+            {
+                Console.WriteLine(e.Message);
+            }
             
             Console.Write($"Массив Элементов через один: ");
             PrintIntArray(GetEvenIndexesElements(numbers));
@@ -36,13 +44,16 @@ namespace ClassWork11
             Console.WriteLine($"Совпадает ли клон с исходным массивом? {answer}");
 
             ReserseIntArray(clone);
-            Console.Write($"Массив в обратном порядке: ");
+            Console.Write("Массив в обратном порядке: ");
             PrintIntArray(clone);
 
             clone = CloneIntArray(numbers);
             ReplaceOddsWithZeroes(clone);
-            Console.Write($"Массив с нулями вместо нечетных чисел: ");
+            Console.Write("Массив с нулями вместо нечетных чисел: ");
             PrintIntArray(clone);
+
+            Console.Write("Отсортированный массив четных чисел: ");
+            PrintIntArray(GetSortedEvens(numbers));
 
             Console.ReadKey();
         }
@@ -111,5 +122,31 @@ namespace ClassWork11
                 if (array[i] % 2 != 0)
                     array[i] = 0;
         }
+        static int [] GetSortedEvens(int[] array)
+        {
+            var count = 0;
+            foreach (var elem in array)
+                if (elem % 2 == 0)
+                    count++;
+
+            var result = new int[count];
+            var index = 0;
+
+            foreach (var elem in array)
+                if (elem % 2 == 0)
+                    result[index++] = elem;
+
+            BubbleSort(result);
+
+            return result;
+        }
+        static void BubbleSort(int[] array)
+        {
+            for (var i = 0; i < array.Length - 1; i++)
+                for (var j = 0; j < array.Length - 1 - i;)
+                    if (array[j] > array[j + 1])
+                        (array[j], array[j + 1]) = (array[j + 1], array[j]);
+        }
+
     }
 }
