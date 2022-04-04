@@ -1,0 +1,36 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.31829.152
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Vectors", "Vectors\Vectors.csproj", "{38B0CB8C-F811-42BD-9203-EAAB02AD026A}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ConsoleApp1", "ConsoleApp1\ConsoleApp1.csproj", "{746B8852-0642-4B7F-A105-C2DFAB810072}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{EFD09782-1DF0-46D6-9326-00D87E4B877C}"
+	ProjectSection(SolutionItems) = preProject
+		Class1.cs = Class1.cs
+	EndProjectSection
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{38B0CB8C-F811-42BD-9203-EAAB02AD026A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{38B0CB8C-F811-42BD-9203-EAAB02AD026A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{38B0CB8C-F811-42BD-9203-EAAB02AD026A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{38B0CB8C-F811-42BD-9203-EAAB02AD026A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{746B8852-0642-4B7F-A105-C2DFAB810072}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{746B8852-0642-4B7F-A105-C2DFAB810072}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{746B8852-0642-4B7F-A105-C2DFAB810072}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{746B8852-0642-4B7F-A105-C2DFAB810072}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {53D5EB97-0581-4539-83D3-B4568C6630CC}
+	EndGlobalSection
+EndGlobal
